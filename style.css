@@ -1,0 +1,350 @@
+/*normalizacion: */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /*esto mantiene el ancho y alto a pesar de border y padding */
+    font-family: "Ledger", serif;
+    font-weight: 400;
+    font-style: normal;
+    list-style: none; /*esto quita los puntos y decoracion de las listas*/
+    text-decoration: none;  /*quita el subrayado en los enlaces */
+    color: white;
+}
+body{
+    background-image: url(ciudad.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header{
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100; /*esto hace que el header se muestre por encima*/
+    width: 100%;
+    display: flex;
+    align-items: center center;
+    justify-content: space-between;
+    padding: 15px 3%;
+    background-color: transparent;
+}
+
+header:hover{
+    background-color: rgba(32, 178, 171, 0.549);
+    transition-duration: 0.9s;
+    
+}
+.logo{
+    font-size: 40px;
+    font-weight: 900;
+    font-family: "Tangerine", serif;
+}
+
+.navlist{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navlist a{
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.4s ease;
+    border-bottom: 5px solid transparent;
+    border-bottom-style: double;
+}
+
+a:hover {
+    border-bottom: 5px solid rgb(112, 232, 192);
+    border-bottom-style: double;
+}
+
+#menu-icon{
+    display: none;
+}
+
+#menu-icon{
+    color: white;
+    font-size: 35px;
+    z-index: 101;
+    cursor: pointer;
+
+}
+
+#menu-toggle{
+    display: none;
+}
+
+#menu-icon-action{
+    display: none;}
+
+.hero{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(255.59deg, #59bcd000 0%, #40809d1a 25%, #13131361 75% );
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+section{
+    padding: 0 13%;
+    position: relative;
+}
+
+.hero-text h5{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;}
+
+.hero-text h1{
+        font-family: "Almendra Display", serif;
+        font-weight: 800;
+        font-style: normal;
+        font-size: 50px ;
+        line-height: 1;
+        margin: 15px 0 30px;
+      }
+      
+
+.hero-text h4{
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px ;
+}
+
+.hero-img img{
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 10% -20% 0% 8%;
+    border-style: solid;
+    transition: all 2.5s ease-out;
+    margin-left: 150px;
+}
+
+.hero-text p{
+    font-size: 110%;
+    margin-bottom: 40px;
+    line-height: 1.9;
+}
+
+.hero-img img:hover{
+    width: 360px;
+    transition-duration: 2s;
+    opacity: 0.9;
+}
+
+.hero-text a{
+    display: inline-block;
+    background-color: #4e6f88;
+    border: 2px solid transparent;
+    padding: 15px 30px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all .5s ease;
+}
+
+.hero-text a:hover{
+    background-color: transparent;
+    color: #4e6f88;
+    border: solid white;
+    font-weight: 800;
+    transform: translate(12px);
+}
+
+.hero-text a.videos{
+    border: 1px solid white;
+    margin-left: 20px;
+}
+
+.hero-text a.videos:hover{
+    background-color: black;
+    border: solid red;
+    color: white;
+}
+
+.ri-play-fill{
+    font-size: 16px;
+    padding: 2px;
+    background-color: transparent;
+    border-radius: 4px;
+    animation-name: boton;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+@keyframes boton{
+    0%{
+        background-color: black;
+    }
+    25%{
+        background-color: red;
+    }
+    50%{
+        background-color: black;
+    }
+    75%{
+        background-color: red;
+    }
+    100%{
+        background-color: black;
+    }
+}
+
+.icons{
+    position: absolute;
+    top: 50vh;
+    padding: 0 3%;
+    transform: translateY(-50%) ;
+}
+
+.icons i{
+    display: block;
+    margin: 26px 0;
+    font-size: 24px;
+    transition: all 0.5s ease;
+}
+
+.ri-github-fill:hover{
+    color: #4d4d4d;
+    transform: translateY(-5px);
+}
+
+.ri-youtube-line:hover{
+    color: red;
+    transform: translateY(-5px);
+}
+
+.ri-instagram-line:hover{
+    background: linear-gradient(255.59deg, #7c1796 0%, #d12cd1 25%, #e97529 50%, rgb(255, 178, 34) 75%, yellow 100%);
+    transform: translateY(-5px);
+    border-radius: 40%;
+}
+
+.ri-instagram-line{
+    transition: all 0s ease;
+}
+
+.scroll-down{
+    position: absolute;
+    bottom: 6%;
+    right: 3%;
+}
+
+.scroll-down i{
+    display: block;
+    padding: 0px;
+    font-size: 50px;
+    border: solid white;
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.674);
+    transition: all .9s ease;
+}
+
+.scroll-down i:hover{
+    transform: translateY(-8px);
+    width: 65px;
+    height: 65px;
+    align-content: center;
+    text-align: center;
+}
+
+@media (max-width:992px){
+    section {
+        padding: 0 3%;
+        transition: .2s;
+    }
+    .icons{
+        display: none;
+    }
+    
+    .hero-img{
+        text-align: center;
+    }
+    
+    .hero-text{
+        padding-top: 0;
+    }
+    
+    .hero-img img{
+        width: 70%;
+        margin: 10% 0 0 10%;}
+
+    .hero-text p{
+        font-size: 97%;}
+
+    .hero-img img:hover{
+        width: 340px;
+        transition-duration: 1s;
+    }
+
+    .scroll-down{
+        display: none;
+    }
+}
+
+@media (max-width: 768px){
+
+    .menu-icon-action{
+        display: block;
+    }
+
+    #menu-icon{
+        display: block;
+    }
+
+    .hero-text{
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .hero-img img{
+        margin: 0;
+        width: 50%;
+    }
+
+    .hero{
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    .navlist{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 120px;
+        height: 210px;
+        background-color: rgba(32, 178, 171, 0.549);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0px;
+        transition: all 0.8s ease-out;
+        line-height: 2.5;
+    }
+
+    .navlist a{
+        margin-left: 0;
+        display: block;
+        margin: 7px o;
+    }
+
+    #menu-toggle:checked + label.menu-icon-action + ul{
+        right: 0;
+        }     
+}
+
